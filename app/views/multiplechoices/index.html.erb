@@ -1,0 +1,31 @@
+<h1>Listing multiplechoices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Choice1</th>
+      <th>Choice2</th>
+      <th>Choice3</th>
+      <th>Choice4</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @multiplechoices.each do |multiplechoice| %>
+      <tr>
+        <td><%= multiplechoice.choice1 %></td>
+        <td><%= multiplechoice.choice2 %></td>
+        <td><%= multiplechoice.choice3 %></td>
+        <td><%= multiplechoice.choice4 %></td>
+        <td><%= link_to 'Show', multiplechoice %></td>
+        <td><%= link_to 'Edit', edit_multiplechoice_path(multiplechoice) %></td>
+        <td><%= link_to 'Destroy', multiplechoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Multiplechoice', new_multiplechoice_path %>

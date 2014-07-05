@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h3>
+  <strong>Question:</strong>
+  <%= @question.question %>
+</h3>
+<p>Choices for the question </p>
+<ul>
+  <br><%= check_box_tag :@question,1%><%= @question.multiplechoice.choice1%>&nbsp<%= check_box_tag :@question,2%><%= @question.multiplechoice.choice2%></br>
+  <br><%= check_box_tag :@question,3%><%= @question.multiplechoice.choice3%>&nbsp<%= check_box_tag :@question,4%><%= @question.multiplechoice.choice4%></br> 
+</ul>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
